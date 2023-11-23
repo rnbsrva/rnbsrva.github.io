@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+          * {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Height for devices larger than 576px */
+      @media (min-width: 992px) {
+        #intro {
+          margin-top: -58.59px;
+        }
+      }
+
+      .cust-btn:hover{
+        color: rgb(31, 28, 28) !important;
+      }
+
+
+
+      img.rot {
+        animation: 10s linear 0s normal none infinite running rot;
+        -webkit-animation: 10s linear 0s normal none infinite running rot;
+        width: 50%;
+        height: 70%;
+      }
+      
+      @keyframes rot {
+        0% {
+          transform: rotate(-45deg);
+        }
+      
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      @-webkit-keyframes rot {
+        0% {
+          transform: rotate(-45deg);
+        }
+      
+        100% {
+          transform: rotate(360deg);
+        }
+      }

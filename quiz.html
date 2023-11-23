@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit France</title>
+
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon_f.ico">
+
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css"
+        rel="stylesheet"/>
+
+        <link rel="stylesheet" href="index.css">
+    
+    
+</head>
+
+
+<body>
+
+    <header>
+        <style>
+          #intro {
+            background-image: url("/images/quiz.jpg");
+            height: 100vh;
+          }
+    
+        </style>
+    
+        <!-- Navbar -->
+        <nav data-mdb-navbar-init class="navbar navbar-expand-lg navbar-light bg-body-tertiary" style="z-index: 2000;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">France</a>
+              <button
+                data-mdb-collapse-init
+                class="navbar-toggler"
+                type="button"
+                data-mdb-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="culture.html">Culture</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="placestogo.html"
+                      >Places to Go</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="quiz.html"
+                      >Quiz</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacts.html"
+                      >Contacts</a
+                    >
+                  </li>
+                </ul>
+              
+              </div>
+            </div>
+          </nav>
+        <!-- Navbar -->
+    
+        <!-- Background image -->
+        <div id="intro" class="bg-image shadow-2-strong">
+          <div class="mask" style="background-color: rgba(0, 0, 0, 0.721);">
+            <div class="container d-flex align-items-center justify-content-center text-center h-100">
+              <div class="text-white">
+                <h1 class="mb-3">Take a quiz down below</h1>
+                <h5 class="mb-4"></h5>
+                <a class="btn cust-btn btn-outline-light btn-lg m-2" href="culture.html" role="button"
+                  rel="nofollow" target="_blank">Read more about France</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Background image -->
+      </header>
+
+
+<main>
+<div class="container ">
+  <h2 class="mt-5">Quiz about France</h2>
+  <form id="quizForm">
+    <div class="form-group m-4">
+      <label for="q1">1. What is the capital of France?</label>
+      <select class="form-control" id="q1" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="paris">Paris</option>
+        <option value="berlin">Berlin</option>
+        <option value="london">London</option>
+        <option value="madrid">Madrid</option>
+      </select>
+    </div>
+    <div class="form-group m-4">
+      <label for="q2">2. Which river runs through Paris?</label>
+      <select class="form-control" id="q2" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="seine">Seine</option>
+        <option value="thames">Thames</option>
+        <option value="danube">Danube</option>
+        <option value="rhine">Rhine</option>
+      </select>
+    </div>
+    <div class="form-group m-4">
+      <label for="q3">3. What is the famous tower in Paris?</label>
+      <select class="form-control" id="q3" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="eiffel">Eiffel Tower</option>
+        <option value="leaning">Leaning Tower of Pisa</option>
+        <option value="bigben">Big Ben</option>
+        <option value="empire">Empire State Building</option>
+      </select>
+    </div>
+    <div class="form-group m-4">
+      <label for="q4">4. Which famous art museum is located in Paris?</label>
+      <select class="form-control" id="q4" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="louvre">Louvre</option>
+        <option value="met">The Met</option>
+        <option value="british">British Museum</option>
+        <option value="rijksmuseum">Rijksmuseum</option>
+      </select>
+    </div>
+    <div class="form-group m-4">
+      <label for="q5">5. What is the official language of France?</label>
+      <select class="form-control" id="q5" required>
+        <option value="" disabled selected>Select an option</option>
+        <option value="french">French</option>
+        <option value="spanish">Spanish</option>
+        <option value="english">English</option>
+        <option value="german">German</option>
+      </select>
+    </div>
+    <button type="button" class="btn btn-outline-dark m-4" onclick="submitQuiz()">Submit</button>
+  </form>
+  <div id="result" class="m-4"></div>
+</div>
+
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  function submitQuiz() {
+    const correctAnswers = {
+      q1: "paris",
+      q2: "seine",
+      q3: "eiffel",
+      q4: "louvre",
+      q5: "french"
+    };
+
+    const userAnswers = {
+      q1: document.getElementById("q1").value.toLowerCase(),
+      q2: document.getElementById("q2").value.toLowerCase(),
+      q3: document.getElementById("q3").value.toLowerCase(),
+      q4: document.getElementById("q4").value.toLowerCase(),
+      q5: document.getElementById("q5").value.toLowerCase()
+    };
+
+    let score = 0;
+    for (const question in correctAnswers) {
+      if (correctAnswers.hasOwnProperty(question)) {
+        if (userAnswers[question] === correctAnswers[question]) {
+          score++;
+        }
+      }
+    }
+
+    const resultDiv = document.getElementById("result");
+    resultDiv.innerHTML = `<p>Your score: ${score} out of 5</p>`;
+  }
+</script>
+
+<footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+      <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+      </div>
+      <div>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+    </section>
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-gem me-3"></i>France
+            </h6>
+            <p>
+              France today is one of the most modern countries in the world and is a leader among European nations.
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Places to Go
+            </h6>
+            <p>
+              <a href="placestogo.html#eiffel" class="text-reset" >The Eiffel Tower</a>
+            </p>
+            <p>
+              <a href="placestogo.html#strasbourg" class="text-reset">Strasbourg</a>
+            </p>
+            <p>
+              <a href="placestogo.html#mont" class="text-reset">Mont Saint-Michel</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> Astana, KZ</p>
+            <p>
+              <i class="fas fa-envelope me-3"></i>
+              visitfrance@gmail.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+            <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold">France.com</a>
+    </div>
+  </footer>
+      <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.umd.min.js"
+  ></script>
+  <script>import { Navbar, Collapse, Ripple, initMDB } from "mdb-ui-kit";
+  
+      initMDB({ Navbar, Collapse, Ripple });</script>
+  </body>
+  </html>
